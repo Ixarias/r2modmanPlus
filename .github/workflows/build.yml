@@ -54,3 +54,10 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: core.setFailed('It seems the build process failed silently. See previous step for more info.')
+          
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.1
+        with:
+          # Artifact name
+          # ${{ github.event.release.tag_name }} on new tag release
+          name:  r2modman-3.1.34.tar.gz 
