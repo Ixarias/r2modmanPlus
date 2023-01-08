@@ -58,6 +58,5 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.1
         with:
-          # Artifact name
-          # ${{ github.event.release.tag_name }} on new tag release
-          name:  r2modman-3.1.34.tar.gz 
+          name: artifacts
+          path: /home/runner/work/r2modmanPlus/r2modmanPlus/dist/electron/Packaged/
